@@ -1,0 +1,14 @@
+.am-grid .am-flexbox .am-flexbox-item .am-grid-item-content .am-grid-item-inner-content.column-num-3 .am-grid-text {
+    font-size: 10px;
+}
+
+.am-grid .am-flexbox .am-flexbox-item .am-grid-item-content .am-grid-item-inner-content .am-grid-text {
+    margin-top: 0px
+}
+
+
+.gradText {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+}
