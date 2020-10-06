@@ -43,20 +43,11 @@ export function getNovelDetail(id) {
 
 }
 
-export function getNovelChapter(novelId, novelIndex) {
+export function getNovelChapter(novelId, sort) {
 
-    const url = `${serverRealmName}/v1/novel/chapter`;
-    return fetch(url, {
-        method: 'post',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: toRequestJSON({//post请求参数
-            novelId: novelId,
-            novelIndex: novelIndex
-        })
-    }).then(result => result.json())
-        .then(response => handleResponse(response))
+    const url = `${serverRealmName}/novel/content/${novelId}/${sort}`;
+    return fetch(url).then(result => result.json())
+
 
 }
 

@@ -14,9 +14,12 @@ class NovelChapter extends React.Component {
         const novelIndex = this.props.match.params.novelIndex;
         const novelId = this.props.match.params.novelId;
         this.setState({
+            novelIndex: parseInt(novelIndex),
+            novelId: parseInt(novelId),
             data: {
-                sum: 0,
-                chapter: {}
+                totalChapter: 0,
+                text: "",
+                chapterTitle: ""
             }
         });
         getNovelChapter(novelId, novelIndex).then(data => {
@@ -30,15 +33,15 @@ class NovelChapter extends React.Component {
 
         return (
             <div className="App" style={{backgroundColor: "#efdbbc"}}>
-                <div className="chapterContent" dangerouslySetInnerHTML={{__html: this.state.data.chapter.content}}/>
+                <div className="chapterContent" dangerouslySetInnerHTML={{__html: this.state.data.text}}/>
 
-                <Pagination simple total={this.state.data.sum}
+                <Pagination simple total={this.state.data.totalChapter}
                             pageSize={1}
-                            current={this.state.data.chapter.novelIndex + 1}
-                            style={{marginTop: 20, marginBottom: 20,backgroundColor: "#efdbbc"}}
+                            current={this.state.novelIndex}
+                            style={{marginTop: 20, marginBottom: 20, backgroundColor: "#efdbbc"}}
                             onChange={number => {
                                 this.props.history.push("/novel/chapter/" +
-                                    this.state.data.chapter.novelId + "/" + (number - 1));
+                                    this.state.novelId + "/" + (number));
                                 this.props.history.go();
                                 document.body.scrollTop = 0;
                             }}

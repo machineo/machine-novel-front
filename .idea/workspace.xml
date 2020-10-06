@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="463614c1-ac2c-4baa-a36d-783a499de33a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/NovelDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/NovelDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/NovelChapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/NovelChapter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601907843451</updated>
-      <workItem from="1601907844508" duration="5356000" />
+      <workItem from="1601907844508" duration="6109000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1601907909422</created>
@@ -79,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601972012165</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <created>1601974665796</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601974665796</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,10 +100,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="512" y="220" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1601908216047" />
-    <state x="316" y="22" key="CommitChangelistDialog2" timestamp="1601972012048">
+    <state x="316" y="22" key="CommitChangelistDialog2" timestamp="1601974665681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="316" y="22" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1601972012048" />
+    <state x="316" y="22" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1601974665681" />
     <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1601972014659">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
