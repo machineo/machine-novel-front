@@ -85,7 +85,7 @@ class NovelList extends React.Component {
                     {dataSource}
                 </List>
 
-                <Pagination simple total={this.state.novelListData.count}
+                <Pagination simple total={this.state.novelListData.count*pageSize}
                             pageSize={pageSize}
                             current={this.state.novelListData.currentPage}
                             style={{marginTop: 20, marginBottom: 20}}
