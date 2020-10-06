@@ -8,11 +8,42 @@
     white-space: normal;
 }
 
+.cardContent {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
 
-.liseDesc {
+.listImage {
+    width: 26% !important;
+    height: 100% !important;
+}
+
+
+.cardContentBottom {
+    width: 74%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+
+.listTitle {
     word-wrap: break-word;
     word-break: normal;
-    font-size: 10px;
+    font-size: 17px;
     width: 100%;
-    height: 100%;
+    border-bottom:1px solid gray;
 }
+
+
+.listDesc {
+    word-wrap: break-word;
+    word-break: normal;
+    font-size: 6px;
+    width: 100%;
+    height: 80%;
+}
+

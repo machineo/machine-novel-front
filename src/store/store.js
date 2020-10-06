@@ -17,22 +17,20 @@ export function login(username, password) {
 }
 
 
-export function search(page, size, searchWord, bizType) {
+export function search(page, size, searchInfo) {
 
-    const url = `${serverRealmName}/v1/search/search`;
+    const url = `${serverRealmName}/novel/search`;
     return fetch(url, {
         method: 'post',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: toRequestJSON({//post请求参数
+        body: JSON.stringify({//post请求参数
             page: page,
             size: size,
-            searchWord: searchWord,
-            bizType: bizType
+            searchInfo: searchInfo
         })
     }).then(result => result.json())
-        .then(response => handleResponse(response))
 
 }
 
@@ -105,7 +103,7 @@ function handleResponse(response) {
     return null;
 }
 
-let token =  window.localStorage.getItem("redsack.token");
+let token = window.localStorage.getItem("redsack.token");
 
 function toRequestJSON(body) {
     return JSON.stringify(addRequestParam(body));
@@ -123,7 +121,7 @@ function addRequestParam(body) {
 
 export function setToken(userToken) {
     token = userToken;
-    window.localStorage.setItem("redsack.token",userToken)
+    window.localStorage.setItem("redsack.token", userToken)
 }
 
 

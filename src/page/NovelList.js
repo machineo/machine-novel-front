@@ -2,11 +2,11 @@ import React from 'react';
 import '../assert/App.css';
 import '../assert/NovelList.css';
 import 'antd-mobile/dist/antd-mobile.css';
-import {List, Card} from 'antd-mobile';
+import {Card, List} from 'antd-mobile';
 import {Pagination} from 'antd';
 import 'antd/dist/antd.css';
-import {novelDownload, rrNovelList, search} from '../store/store';
-import {pageSize, serverRealmName} from "../const";
+import {search} from '../store/store';
+import {pageSize} from "../const";
 
 const Item = List.Item;
 
@@ -32,15 +32,15 @@ class NovelList extends React.Component {
 
 
     getData(currentPage, searchValue) {
-        search(currentPage, pageSize, searchValue, "novel")
+        search(currentPage, pageSize, searchValue)
             .then(data => {
                 if (data) {
                     console.log(data)
                     this.setState({
                         novelListData: {
-                            count: data.count,
-                            currentPage: data.currentPage,
-                            novels: data.result.map(item => JSON.parse(item))
+                            count: data.totalPage,
+                            currentPage: currentPage,
+                            novels: data.novelList
                         }
                     });
                 }
@@ -63,14 +63,17 @@ class NovelList extends React.Component {
         dataSource = this.state.novelListData.novels.map(item => (
             <Item key={item.id} onClick={() => this.props.history.push("/novel/detail/" + item.id)}>
                 <Card>
-                    <Card.Header
-                        title={item.name}
-                        extra={<span>类型:{item.classify}</span>}
-                    />
                     <Card.Body>
-                        <div className="liseDesc">{item.desc}</div>
+                        <div className="cardContent">
+                            <img className="listImage" src={item.image} />
+                            <div className="cardContentBottom">
+                                <div className="listTitle">{item.title}</div>
+                                <div className="listDesc">{item.description}</div>
+                            </div>
+
+                        </div>
+
                     </Card.Body>
-                    <Card.Footer content={<div>大小:{item.size / 1000}KB</div>}/>
                 </Card>
             </Item>
         ));

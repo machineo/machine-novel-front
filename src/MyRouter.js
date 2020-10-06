@@ -56,6 +56,7 @@ class MyRouter extends React.Component {
             <Router.Switch>
                 <Router.Route exact path="/novel/:page" component={NovelList}/>
                 <Router.Route exact path="/novel" component={NovelList}/>
+                <Router.Route exact path="/" component={NovelList}/>
                 <Router.Route exact path="/novel/detail/:id" component={NovelDetail}/>
                 <Router.Route exact path="/novel/chapter/:novelId/:novelIndex" component={NovelChapter}/>
             </Router.Switch>
