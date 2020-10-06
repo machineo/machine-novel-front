@@ -33,7 +33,7 @@ class MyRouter extends React.Component {
                         <Icon key="0" type="search" style={{marginRight: '16px'}} onClick={() => {
                             this.setState({showSearch: !this.state.showSearch})
                         }}/>,
-                    ]}>ReaMov</NavBar>
+                    ]}>Machine Novel</NavBar>
             {this.state.showSearch ?
                 <SearchBar
                     value={this.state.searchValue}

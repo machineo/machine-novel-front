@@ -37,17 +37,9 @@ export function search(page, size, searchInfo) {
 
 export function getNovelDetail(id) {
 
-    const url = `${serverRealmName}/v1/novel/detail`;
-    return fetch(url, {
-        method: 'post',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: toRequestJSON({//post请求参数
-            id: id
-        })
-    }).then(result => result.json())
-        .then(response => handleResponse(response))
+    const url = `${serverRealmName}/novel/detail/${id}`;
+    return fetch(url)
+        .then(result => result.json())
 
 }
 
